@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+// Dupla: Alanna Keila Jesus Lopes e Sarah Araújo Pimentel de Sousa, 3º C.
+
+<h2>Realize seu Pagamento!</h2>
+<h4>É fortemente recomendado preencher todos os campos solicitados, a ausência de uma dessas 
+    informações pode impedir que seu processo seja finalizado com sucesso!</h4>
+
+<form name="FormInfo" action="" method="post">
+  <label for="NCompleto">Insira seu nome:</label><br>
+  <input type="text" id="NCompleto" name="NCompleto" value=""><br>
+  
+  <label for="Email">Adicione seu Email:</label><br>
+  <input type="email" id="email" name="email" value=""><br>
+  
+  <label for="CPF">Nos informe seu CPF:</label><br>
+  <input type="text" id="cpf" name="cpf" value=""><br>
+  
+  <label for="Pagamento">Selecione a forma que deseja realizar o pagamento:</label><br>
+  <input type="radio" id="Fpagamento" name="Forma_pag" value="Cartão">
+  <label for="Fpagamento">Cartão</label><br>
+  
+  <input type="radio" id="Fpagamento" name="Forma_pag" value="Boleto">
+  <label for="Fpagamento">Boleto</label><br>
+  
+  <input type="radio" id="Fpagamento" name="Forma_pag" value="Pix">
+  <label for="Fpagamento">Pix</label><br>
+  
+  <input type="submit" value="Enviar" onclick="mensagem()">
+</form> 
+
+<script>
+    var Nome;
+
+    function mensagem() {
+        Nome = document.FormInfo.NCompleto.value;
+        window.alert('Olá ' + Nome + ', o surgimento desta mensagem indica que todo o processo foi finalizado sem falhas. Seja bem vindo(a)!');
+    }
+</script>
+
+
+</body>
+</html>
