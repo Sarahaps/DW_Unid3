@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Realize seu Pagamento!</h2>
+<h4>É fortemente recomendado preencher todos os campos solicitados, a ausência de uma dessas 
+    informações pode impedir que seu processo seja finalizado com sucesso!</h4>
+
+<form name="FormInfo" action="" method="post">
+  <label for="NCompleto">Insira seu nome:</label><br>
+  <input type="text" id="NCompleto" name="NCompleto" value=""><br>
+  
+  <label for="Email">Adicione seu Email:</label><br>
+  <input type="email" id="email" name="email" value=""><br>
+  
+  <label for="CPF">Nos informe seu CPF:</label><br>
+  <input type="text" id="cpf" name="cpf" value=""><br>
+  
+  <label for="Pagamento">Selecione a forma que deseja realizar o pagamento:</label><br>
+  <input type="radio" id="Fpagamento" name="Forma_pag" value="Cartão">
+  <label for="Fpagamento">Cartão</label><br>
+  
+  <input type="radio" id="Fpagamento" name="Forma_pag" value="Boleto">
+  <label for="Fpagamento">Boleto</label><br>
+  
+  <input type="radio" id="Fpagamento" name="Forma_pag" value="Pix">
+  <label for="Fpagamento">Pix</label><br>
+  
+  <input type="submit" value="Enviar" onclick="validacao()">
+</form> 
+
+<script>
+    //Alteração no código JS para validação dos campos "Nome" e "cpf" do Formulário
+    var Nome;
+
+    function validacao() {
+        Nome = document.FormInfo.NCompleto.value;
+        CadPessFis = document.FormInfo.cpf.value;
+
+        if (Nome.length > 30) {
+            window.alert("Nome inválido! O número máximo de caracteres (30) foi ultrapassado.");
+        }
+
+        if(CadPessFis.length < 14 || CadPessFis.length > 14){
+            window.alert("CPF inválido! Essa informação precisa conter exatamente 14 dígitos (incluindo ' - ' e ' . ')");
+        }
+
+        
+    }
+
+
+</script>
+
+
+</body>
+</html>
